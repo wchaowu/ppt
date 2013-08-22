@@ -309,3 +309,15 @@ span.tool {
 	     -o-transition: width 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
 	        transition: width 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
 }
+#showMap{
+	cursor:pointer;
+}
+.openDiv{
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index:100;
+	width: 1024px;
+	height: 600px;
+}
