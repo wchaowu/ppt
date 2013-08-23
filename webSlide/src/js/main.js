@@ -3,7 +3,7 @@ var showMap = $("#showMap");
 var closeMap =  $(".closediv");
 var openObj = null;
 showMap.bind("click",function (){
-var openObj = $("#map");
+    openObj = $("#map");
 	openObj.show("slow");
 });
 closeMap.bind("click",function (){
@@ -14,4 +14,8 @@ var showJosnp = $("#showJosnp")
 showJosnp.bind("click",function(){
 	openObj =  $("#josnp")
 	openObj.show("slow");
-})
+});
+var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+    lineNumbers: true
+  });
+   editor.setOption("theme", "ambiance");

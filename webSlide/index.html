@@ -4,8 +4,10 @@
 	<meta charset="UTF-8">
 	<title>webSlide - PPT演示文档javascript框架 BY @吴超武</title>
 	<link rel="stylesheet" href="src/css/webslide.css" />
-	<link rel="stylesheet" href="src/css/codecolorer.css" />
 
+    <link rel="stylesheet" href="src/lib/codemirror.css">
+    <link rel="stylesheet" href="src/lib/ambiance.css">
+    <script src="src/lib/codemirror.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -23,6 +25,7 @@
 		<h1 class="header">javascript平台</h1>
 		<ul>		
 			<li id="showJosnp">JSON & JSONP</li>
+            <li>github</li>
 			<li>Node.js</li>
 			<li>mongoDB</li>
 			<li>Winjs <a href="http://msdn.microsoft.com/library/windows/apps/hh770842.aspx" target="_blank">应用商店</a></li>	
@@ -39,7 +42,7 @@
 			<li>wef office</li>	
 			<li id="showMap">百度地图</li>	
 			<li>chrome 插件</li>	
-			<li>window8.1应用程序</li>		
+			<li>window应用程序</li>		
 		</ul>
 	</section>
 
@@ -68,26 +71,20 @@
 		</div>
 	</section>
 	<section id="grammar" class="step slide rebuild">
-		<h1>基本语法 &nbsp; 1</h1>
-		<h2>注释</h2>
-		<ul>
-			<li>//、/**/</li>
-		</ul>
-		<div data-build><h2>定义变量</h2>
-		<ul>
-			<li>var &lt;变量&gt; = &lt;表达式&gt;;</li>
-			<li>变量名以字母和下划线开头</li>
-		</ul>
-		
-		<h2>弱类型变量</h2>
-		<ul>
-			<li>变量声明时不需显式地指定其数据类型</li>
-		</ul>
-		<h2>运算符</h2>
-		<ul>
-			<li>+ &nbsp;&nbsp; - &nbsp;&nbsp; * &nbsp;&nbsp; / &nbsp;&nbsp; = &nbsp;&nbsp; % &nbsp;&nbsp; == &nbsp;&nbsp; != &nbsp;&nbsp; === &nbsp;&nbsp; !== ……</li>
-		</ul>
-		</div>
+		<textarea id="code" name="code">
+        function findSequence(goal) {
+          function find(start, history) {
+            if (start == goal)
+              return history;
+            else if (start > goal)
+              return null;
+            else
+              return find(start + 5, "(" + history + " + 5)") ||
+                     find(start * 3, "(" + history + " * 3)");
+          }
+          return find(1, "1");
+        }
+</textarea>
 	</section>
 	<section id="grammar2" class="step slide rebuild" >
 		<h1>变量类型</h1>
@@ -545,11 +542,7 @@ node.<span class="me1">parentNode</span>.<span class="me1">removeChild</span><sp
 		</ul>
 		<img src="src/img/udc9.png" style="position:absolute;right:300px;top:300px;" />
 	</section>
-	
-	
-	<script type="text/javascript">
 
-</script>
 	<section id="node" class="close">
 		<h2>node.js</h2>
 		<ul data-build>
@@ -564,67 +557,22 @@ node.<span class="me1">parentNode</span>.<span class="me1">removeChild</span><sp
 			<a href="http://js8.in/tag/nodejs">nodejs文章</a>
 		</footer>
 	</section>
-	
-	<section id="editor" class="step slide rebuild">
-		<h2>编辑器</h2>
-		<ul>
-			<li>IDE:Apanta、webStorm、eclipse</li>
-			<li>文本编辑器：NotePad++、记事本、Sublime Text2……</li>
-			<li>牛人利器：vim</li>
-		</ul>
-		<script type="text/javascript">
-			var my_zen_settings = {
-				html: {
-					filters: 'bem,html'
-				}
-			};
-			var loadZenCoding = function(){
-				var script = document.createElement('script');
-				script.onload = function(){
-					document.getElementById('zencodingParent').addEventListener('keydown',function(e){
-						e.stopPropagation();
-					},false);
-					zen_textarea.setup({pretty_break: true, use_tab: true});
-					alert('加载zencoding成功，开始吧！');
-				}
-				script.src = 'src/js/zen_textarea.js';
-				document.body.appendChild(script);
-			}
-		</script>
-		<script type="text/javascript" src="http://zen-coding.ru/textarea/zen_textarea.min.js"></script>
-		<div data-build id="zencodingParent">
-			<h4>Zen Coding</h4>
-			<p style="font-size:20px;">zenCoding是一种快速写html/css的软件，只是语法缩写，提高前端工作者的代码书写效率<br/>
-			<button onclick="loadZenCoding()">加载ZenCoding</button>，加载之后输入zencoding语法，使用Tab做展开快捷键<br/>
-			例如：html:xt>div#id.cls>ul>li*5>a[title="title$"]+img[src='src/img/$.png']
-			</p>
-			
-			<center><textarea id="zencoding" class="zc-use_tab-true" style="width:700px;height:360px"></textarea></center>
-		</div>
-	</section>
-	
+    	
 	<section id="debug" class="step slide">
-		<h2>调试工具</h2>
+		<h2>javascript工具</h2>
 		<ul>
+        	<li>IE：F12</li>
 			<li>Firefox：firebug</li>
-			<li>IE：debugBar， Companion.js</li>
-			<li>Chrome：开发者工具</li>
-		
+			<li>Chrome：开发者工具</li>	
+            <li>js代码质量检测工具：JSLint</li>
+            <li>noflo</li>
+            <li>ixedit</li>
 		</ul>
 		<img src="src/img/udc10.png" style="" />
 		<img src="src/img/udc11.png" style="position:absolute;bottom:50px;left:0" />
 		<img src="src/img/udc12.png" style="position:absolute;right:0;bottom:0" />
 	</section>
-	
-	<section id="jslint" class="step slide rebuild">
-		<h2>js代码质量检测工具：JSLint</h2>
-		<ul>
-			<li><strong>JSLint</strong> 是 Douglas Crockford 创建的js代码质量检测工具。虽然 JSLint 不能保证代码逻辑一定正确，但却有助于发现错误并教会开发人员一些好的编码实践。 </li>
-		</ul>
-		<center data-build><img src="src/img/udc13.png" style="height:400px" /></center>
-		
-	</section>
-	
+    
 	<section id="book" class="step slide rebuild">
 		<h1>学习书籍</h1>
 		<div data-build>
@@ -672,14 +620,12 @@ node.<span class="me1">parentNode</span>.<span class="me1">removeChild</span><sp
 		<button onclick="getGeo()">定位</button> <button id="closeMap" class="closediv">关闭</button> 
 </div>
 </div>
-<div id="josnp" class="openDiv">
+<div id="josnp" class="openDiv" >
 		<h1>在线输入法</h1>		
-		<div data-build>
-		<p><strong>应用</strong>：
+		<p><strong>应用</strong>       
 		<a href="javascript:void((function(){var n=navigator.userAgent.toLowerCase();ie=n.indexOf('msie')!=-1?1:0;if(document.documentMode)ie=0;charset='';if(ie)charset=document.charset;src=ie&&charset=='utf-8'?'http://web.pinyin.sogou.com/web_ime/init2_utf8.php':'http://web.pinyin.sogou.com/web_ime/init2.php';element=document.createElement('script');element.setAttribute('src',src);document.body.appendChild(element);})())">云输入法</a></p>
 		<input type="text" id="area_con" style="overflow:auto;" value="体验下云输入法" onfocus="if(this.value=='体验下云输入法'){this.value=''}" onblur="if(this.value==''){this.value='体验下云输入法'}"/>
-		<center><img src="src/img/udc17.png" style="width:750px" /></center>
-		</div>
+     <img src="src/img/udc17.png" style="width:750px" />
 		<button class="closediv">关闭</button>		
 </div>
 
