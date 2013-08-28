@@ -1,0 +1,16 @@
+<html> 
+<body > 
+<div id='a' onclick="alert('div')"> div 点击事件 </div>
+<hr> 
+
+<script>
+document.getElementById('a').setCapture();
+
+</script> 
+
+setCapture 的最大好处是：不会被甩掉！
+一般来说，setCapture 都应该配合 onlosecapture 事件处理
+举个简单的例子：我在拖拉的时候，按着鼠标左键，突然别的地方弹了一个窗口出来，当前页就没有焦点了。这时候是不会激发 onmouseup 事件的，结果就是程序出现了混乱。而这时候会激发 onlosecapture 事件，如果你在 该事件里 处理了，把拖拉内容放下的话，就不会出错了
+
+</body> 
+</html> 

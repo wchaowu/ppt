@@ -1,0 +1,60 @@
+<script type="text/javascript">
+    function Person(name, address) {
+        this.Name = name;
+        this.Address = address;
+    }
+    Person.prototype.Show = function() {
+        return this.Name;
+    }
+    //使用call 继承
+    function user(name, address) {
+        Person.call(this, name, address)
+        this.Tel = "134010842**";
+    }
+    //使用apply 继承
+    function user2(name, address) {
+        Person.apply(this, arguments) //apply第二个参数是参数数组,所以可以使用arguments（这是和call的区别）
+        this.Tel = "134010842**";
+    }
+    //使用prototype 继承
+    user3.prototype = new Person(); //建一个基类的对象作为子类原型的原型,这样子类才会继承父类的方法
+    function user3(name, address) {
+        Person.apply(this, arguments);
+        this.Tel = "134010842**";
+    }
+    var user1 = new user("江湖小子1", "四川");
+    alert(user1.Name + "-" + user1.Tel + "-" + user1.Address);
+    var user2 = new user2("江湖小子2", "北京");
+    alert(user2.Name + "-" + user2.Tel + "-" + user2.Address);
+    var user3 = new user3("江湖小子3", "上海");
+    alert(user3.Name + "-" + user3.Tel + "-" + user3.Address);
+</script>
+Javascript面向对象：
+<script type="text/javascript">
+    var Bus;
+    //构造函数
+    if (Bus == undefined) {
+       Bus = function(name, num) {
+           this.Init(name, num);
+       };
+    }
+    Bus.prototype.Init = function(name, num) {
+       this.Name = name;
+       this.Num = num;
+    }
+    //静态成员
+    Bus.City = "静态北京";
+    Bus.GetCity = function() {
+        return Bus.City;
+    }
+    //实例成员
+    Bus.prototype.City = "实例北京";
+    Bus.prototype.Show = function() {
+        return this.Name + "-" + this.Num;
+    }
+    var bus = new Bus("公交车", "100");
+    alert(bus.City);        //实例北京
+    alert(bus.Show());      //公交车 - 100
+    alert(Bus.City);        //静态北京
+    alert(Bus.GetCity());   //静态北京
+</script>

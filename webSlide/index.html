@@ -53,18 +53,46 @@
 		</ul>
         </div>
           <div data-build>
-		<h2>document.write方式</h2>
+		  	<h1>script 加载</h1>		
+        </div>
+		  <div data-build>
+		  	<ul><li>基础的script 标签加载</ul></li>
+	
+        </div>
+		 <div data-build>
+		  	<ul><li>
+		      document.write方式			
+			</li>
+			</ul>
         </div>
         <div data-build>
-       
+    
+	  <ul>
+		<li>
         script的defer和async属性
+		</li>
+		</ul>
+		
         </div>
-          <div data-build>       
+		
+          <div data-build>
+      
+	  <ul>
+		<li>
 	      动态创建DOM方式
+		</li>
+		</ul>
+		
         </div>
-        <div data-build>
+         <div data-build>
+     
+	  <ul>
+		<li>
             按需异步载入js		
-		</div>
+		</li>
+		</ul>
+		
+        </div>
 	</section> 
 	
 	<section id="grammar2" class="step slide rebuild" >
@@ -82,10 +110,7 @@
 		</ul>
 		</div>
 		<div data-build>
-		<h2>对象类型</h2>
-		<ul>
-			<li>以基础类型为基础，从object这一种类型中发展起来的</li>
-		</ul>
+		<h2>数组类型介绍</h2>		
 	</div>
     </section>	
 	<section id="grammar4" class="step slide rebuild">
@@ -96,149 +121,72 @@
          <li>var varibale = new Date(string);</li>
          <li>var variable = new Date(year, month, day, hours, minutes, seconds, milliseconds);</li>
         </ul>
+		 <div data-build>
+		<h1>Date对象方法的介绍</h1>
+		</div>
     </section>
 	
 	<section id="grammar6" class="step slide rebuild">
 		<h2>事件</h2>
-		<p>对象是命名的的值的集合(键-值对)，它和数组很相似，唯一的不同之处在于你可以为每个数据值指定名字。</p>
 		<div data-build>
+		<li>setCapture方法</li>
+	    <li>事件的冒泡</li>
+		<li>事件的绑定函数中的this</li>
+		</li>
+		<div data-build>
+		<li>事件的绑定优化</li>
 		</div>    
     </section>	
+	
 	<section id="grammar8" class="step slide rebuild">
-		<h2>对象</h2>
-		<ul>
-			<li>声明方法</li>
-		</ul>
+		<h2>对象函数</h2>
 		<div data-build>
-		<div class="codecolorer-container javascript railscasts" style="overflow:auto;white-space:nowrap;width:700px;"><div class="javascript codecolorer"><span class="co1">// 使用函数操作创建一个新函数:</span><br>
-<span class="kw2">function</span> myFunctionName<span class="br0">(</span>arg1<span class="sy0">,</span> arg2<span class="br0">)</span> <span class="br0">{</span><br>
-&nbsp; &nbsp; <span class="co1">// 这里是函数的代码</span><br>
-<span class="br0">}</span><br>
-&nbsp; &nbsp; <br>
-<span class="co1">// 如果你省略掉函数名，那么你创建的是"匿名函数":</span><br>
-<span class="kw2">function</span><span class="br0">(</span>arg1<span class="sy0">,</span> arg2<span class="br0">)</span> <span class="br0">{</span><br>
-&nbsp; &nbsp; <span class="co1">// 这里是函数的代码</span><br>
-<span class="br0">}</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; <br>
-<span class="co1">// 执行函数仅需对他进行引用并使用圆括号 (附带参数):</span><br>
-myFunctionName<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span> <span class="co1">// 无参数</span><br>
-myFunctionName<span class="br0">(</span><span class="st0">'foo'</span><span class="sy0">,</span> <span class="st0">'bar'</span><span class="br0">)</span><span class="sy0">;</span> <span class="co1">// 带参数</span><br>
-&nbsp; &nbsp; <br>
-<span class="co1">// 你也可以在不声明变量的情况下执行函数</span><br>
-&nbsp; &nbsp; <br>
-<span class="br0">(</span><span class="kw2">function</span><span class="br0">(</span><span class="br0">)</span><span class="br0">{</span><br>
-&nbsp; &nbsp; <span class="co1">// 这就是所谓的自调用匿名函数</span><br>
-<span class="br0">}</span><span class="br0">)</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span></div></div>
-	</div>
+			<ul>
+				<li>argument</li>
+			</ul>
+		</div>
+		
+		<div data-build>
+		 <h2> construction </h2>
+		   <ul>
+		   <li>
+			生成对象的原始模式
+		   </li>
+		    <li>
+			构造函数模式
+		   </li>
+		    <li>
+			Prototype模式
+		   </li>
+		   </div>
+		<div data-build>
+		<h2> Inheritance </h2>
+		   <ul>
+		   <li>
+		 Prototype继承
+		   </li>
+		      <li>
+			call继承
+		   </li>
+		      <li>
+			apply继承
+		   </li>
+		   </div>
+		<div data-build>
+		  <h1>
+		   encapsulation 
+		  </h1>
+	    </div>	
 	</section>
 	
 	<section id="obj1" class="step slide rebuild" >
 		<h1>DOM &nbsp; 1</h1>
-
 			<h2>获取节点属性：node.getAttribute/setAttribute</h2>
 			<h2>getElementById在IE下的bug</h2>
 		<ul data-build>
-			<li>String：<span style="color:#F60">"string"</span></li>
-			<li style="list-style:none;" >
-				<ul>
-					<li style="list-style:square inside">"123".length<button onclick="alert('123'.length);">getLength</button></li>
-					<li style="list-style:square inside">indexOf()/replace()/substring()/slice()。。。</li>
-				</ul>
-			</li>
-			<li>Array：<span style="color:#F60">[1,2,3] []</span></li>
-			<li style="list-style:none;">
-				<ul>
-					<li style="list-style:square inside">[1,2,3].length<button onclick="alert([1,2,3].length);">getLength</button></li>
-					<li style="list-style:square inside">push()/pop()/shift()/unshift()。。。</li>
-				</ul>
-			</li>
-			<li>Date：<span style="color:#F60">new Date(12345678901)</span><button onclick="alert(new Date());">getDate</button></li>
-			<li style="list-style:none;">
-				<ul>
-					<li style="list-style:square inside">getTime()/getFullYear()/getHours()。。。</li>
-				</ul>
-			</li>
-			<li>Math：<span style="color:#F60">Math.PI、Math.max(2,3)</span><button onclick="alert(Math.max(2,3));">RUN</button></li>
-			<li>RegExp：<span style="color:#F60">/^\s|\s$/img</span></li>
-			<li style="list-style:none;">
-				<ul>
-					<li style="list-style:square inside">/e/ig.test('h<span style="color:red">E</span>llo world')<button onclick="alert(/e/g.test('hello world'));">RUN</button></li>
-					<li style="list-style:square inside">exec()。。。</li>
-				</ul>
-			</li>
+			
 		</ul>		
 	</section>
-
-	<section id="obj2" class="step slide rebuild">
-		<h1>常见对象及方法 &nbsp; 2</h1>
-		<ul data-build>
-			<li>window：<span style="color:#F60">alert('hello world')</span></li>
-			<li>document：<span style="color:#F60">.write...</span><button onclick='alert(document);'>Run</button></li>
-			<li>navigator：<span style="color:#F60">alert(navigator.userAgent);<button onclick='alert(navigator.userAgent);'>Run</button></span></li>
-			<li>location：<span style="color:#F60">location.href...<button onclick='alert(location.href);'>Run</button></span></li>
-		</ul>
-		<div data-build>
-		<center><img src="src/img/udc0.png" style="position:absolute;left:0;top:340px;width:900px" /></center></div>
-	</section>
-	<section id="step10" class="step slide rebuild">
-		<h1>DOM</h1>
-		<ul>
-			<li>文档对象模型(Document Object Model)，通常简称为DOM，是网站内容与JavaScript互通的接口。自JavaScript成为最常用的语言时JavaScript和DOM通常被视为独立的实体。DOM接口用于存取、遍历和控制HTML和XML文档</li>
-		</ul>
-		<div data-build>
-		<div class="codecolorer-container html4strict railscasts" style="position:absolute;left:50px;top:340px;overflow:auto;white-space:nowrap;width:420px;"><table cellspacing="0" cellpadding="0"><tbody><tr><td class="line-numbers"><div>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br></div></td><td><div class="html4strict codecolorer"><span class="sc2">&lt;<span class="kw2">html</span>&gt;</span><br>
-&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">head</span>&gt;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">title</span>&gt;</span>Sample Page<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">title</span>&gt;</span><br>
-&nbsp; &nbsp; <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">head</span>&gt;</span><br>
-&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">body</span>&gt;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>hello world!<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span><br>
-&nbsp; &nbsp; <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;</span><br>
-<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">html</span>&gt;</span></div></td></tr></tbody></table></div>
-		<img src="src/img/udc2.png" style="position:absolute;right:50px;top:300px;"/>
-		</div>
-	</section>
-	
-	<div id="idName" node-type="hello" style="display:none;">
-		<ul id="ul">
-			<li>i am 1</li>
-			<li>i am 2</li>
-			<li>i am 3</li>
-		</ul>
-	</div>
-	
-	<script type="text/javascript">
-		var $demoNode = document.getElementById('idName');
-	</script>
-	
-	<section id="dom1" class="step slide">
-		<h1>获取DOM节点</h1>
-		
-		<div class="codecolorer-container html4strict railscasts" style="overflow:auto;white-space:nowrap;width:700px;"><table cellspacing="0" cellpadding="0"><tbody><tr><td class="line-numbers"><div>1<br>2<br>3<br>4<br>5<br>6<br>7<br></div></td><td><div class="html4strict codecolorer"><span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">"idName"</span> node-<span class="kw3">type</span><span class="sy0">=</span><span class="st0">"hello"</span>&gt;</span><br>
-&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">ul</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">"ul"</span>&gt;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>i am 1<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>i am 2<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>i am 3<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span><br>
-&nbsp; &nbsp; <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">ul</span>&gt;</span><br>
-<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span></div></td></tr></tbody></table></div>
-
-		<p>创建：createElement/createTextNode<button onclick="createNode()">创建节点</button></p>
-		<div class="codecolorer-container javascript railscasts" style="overflow:auto;white-space:nowrap;width:700px;"><table cellspacing="0" cellpadding="0"><tbody><tr><td class="line-numbers"><div>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br></div></td><td><div class="javascript codecolorer"><span class="co1">//创建元素节点</span><br>
-<span class="kw2">var</span> $span <span class="sy0">=</span> document.<span class="me1">createElement</span><span class="br0">(</span><span class="st0">'span'</span><span class="br0">)</span><span class="sy0">;</span><br>
-<span class="co1">//创建文本节点</span><br>
-<span class="kw2">var</span> $text <span class="sy0">=</span> document.<span class="me1">createTextNode</span><span class="br0">(</span><span class="st0">'world!'</span><span class="br0">)</span><span class="sy0">;</span><br>
-$span.<span class="me1">style</span>.<span class="me1">color</span> <span class="sy0">=</span> <span class="st0">'red'</span><span class="sy0">;</span><span class="co1">//给点color see see</span><br>
-$span.<span class="me1">appendChild</span><span class="br0">(</span>$text<span class="br0">)</span><span class="sy0">;</span><br>
-<span class="co1">//获取插入父节点</span><br>
-<span class="kw2">var</span> node <span class="sy0">=</span> document.<span class="me1">getElementById</span><span class="br0">(</span><span class="st0">'cNode'</span><span class="br0">)</span><span class="sy0">;</span><br>
-node.<span class="me1">appendChild</span><span class="br0">(</span>$span<span class="br0">)</span><span class="sy0">;</span></div></td></tr></tbody></table></div>
-	
-	<p>删除：.removeChild<button onclick="removeNode()">删除节点</button></p>
-	<div class="codecolorer-container javascript railscasts" style="overflow:auto;white-space:nowrap;width:780px;"><table cellspacing="0" cellpadding="0"><tbody><tr><td class="line-numbers"><div>1<br>2<br>3<br></div></td><td><div class="javascript codecolorer"><span class="kw2">var</span> node <span class="sy0">=</span> document.<span class="me1">getElementById</span><span class="br0">(</span><span class="st0">'cNode'</span><span class="br0">)</span><span class="sy0">;</span><span class="co1">//获取p</span><br>
-node <span class="sy0">=</span> node.<span class="me1">getElementsByTagName</span><span class="br0">(</span><span class="st0">'span'</span><span class="br0">)</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><span class="sy0">;</span><span class="co1">//获取span列表，取第一个</span><br>
-node.<span class="me1">parentNode</span>.<span class="me1">removeChild</span><span class="br0">(</span>node<span class="br0">)</span><span class="sy0">;</span><span class="co1">//删除</span></div></td></tr></tbody></table>
-</div>			
-	</section>
-	
 
 	<section id="html5" class="step slide rebuild">
 		<h1>未来</h1>
@@ -281,10 +229,7 @@ node.<span class="me1">parentNode</span>.<span class="me1">removeChild</span><sp
             <li>js代码质量检测工具：JSLint</li>
             <li>noflo</li>
             <li>ixedit</li>
-		</ul>
-		<img src="src/img/udc10.png" style="" />
-		<img src="src/img/udc11.png" style="position:absolute;bottom:50px;left:0" />
-		<img src="src/img/udc12.png" style="position:absolute;right:0;bottom:0" />
+		</ul>		
 	</section>
     
     	<section id="debug" class="step slide">
@@ -293,23 +238,9 @@ node.<span class="me1">parentNode</span>.<span class="me1">removeChild</span><sp
 			<li>编程方法的介绍</li>
         	<li>javascript 可视化流程编程</li>
 			<li>http://noflojs.org</li>			
-		</ul>
-		<img src="src/img/udc10.png" style="" />
-		<img src="src/img/udc11.png" style="position:absolute;bottom:50px;left:0" />
-		<img src="src/img/udc12.png" style="position:absolute;right:0;bottom:0" />
-	</section>
-	
-    
-	<section id="book" class="step slide rebuild">
-		<h1>学习书籍</h1>
-		<div data-build>
-		<img src="src/img/udc4.png" alt="" />
-		<img src="src/img/udc5.png" alt="" />
-		<br/>
-		<img src="src/img/udc6.png" alt="" />
-		<img src="src/img/udc7.png" alt="" />
-		</div>
-	</section>
+		</ul>	
+	</section>   
+
 	
 	<section id="resource" class="step slide">
 		<h1>学习资料</h1>
@@ -319,8 +250,7 @@ node.<span class="me1">parentNode</span>.<span class="me1">removeChild</span><sp
 				<li>http://www.javascriptoo.com/</li>
 			<li>https://developer.mozilla.org/en-US/docs/Web/JavaScript</li>
 			<li>http://pineapple.io</li>
-		</ul>
-		
+		</ul>		
 	</section>
 	
 	<section id="quetion" class="step" >
