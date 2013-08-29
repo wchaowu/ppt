@@ -1,0 +1,56 @@
+ 
+<!doctype html>
+<html dir="ltr" lang="zh-CN">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <style type="text/css">
+      body{background:#fff;}
+      a { color:#8080C0;text-decoration:none;border-bottom:2px solid #fff;}
+      a:hover {color:#336699;border-bottom-color:#B45B3E;}
+    </style>
+    <script type="text/javascript">
+      var addEvent = (function () {
+        if (document.addEventListener) {
+          return function (el, type, fn) {
+            el.addEventListener(type, fn, false);
+          };
+        } else {
+          return function (el, type, fn) {
+            el.attachEvent('on' + type, function () {
+              return fn.call(el, window.event);
+            });
+          }
+        }
+      })();
+
+      window.onload = function(){
+        var nav = document.getElementById("nav");
+        nav.onclick = function () {
+          var e = arguments[0] || window.event,
+          target = e.srcElement ? e.srcElement : e.target;
+          alert(target.innerHTML);
+          return false;
+        }
+        var wrapper = document.getElementById("wrapper");
+        addEvent(wrapper,'click',function(){
+          // alert("冒泡过程连我也惊动了！");
+        });
+      }
+    </script>
+    <title>delegate</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <ul id="nav">
+	   <li><a href="http://www.github.com/">github</a></li>
+        <li><a href="http://www.codeplex.com/">codeplex</a></li>
+        <li><a href="http://www.codeproject.com/">codeproject</a></li>
+        <li><a href="http://www.google.com/">google</a></li>
+        <li><a href="http://www.javaeye.com/">javaeye</a></li>
+        <li><a href="http://vbooking.github.io/">blog</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
+   

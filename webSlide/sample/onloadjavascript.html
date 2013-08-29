@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> New Document </title>
+  <meta name="Generator" content="Vbooking System">
+  <meta name="Author" content="cwwu">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ </head>
+ <body>
+  <script type="text/javascript">
+var js = document.createElement("script"); 
+js.src = '**.js'; 
+document.getElementsByTagName("head")[0].appendChild(js); 
+</script> 
+ <script type="text/javascript">
+/**
+   * 动态加载脚本函数
+   * @param url 要加载的脚本路径
+   * @param callback  回调函数
+   */
+function loadScript(url,callback){
+
+    var script = document.createElement("script");
+
+    script.type = "text/javascript";
+
+    if(script.readyState){  //IE
+
+      script.onreadystatechange = function(){
+
+        if(script.readyState=="load"||script.readyState=="complete"){
+
+          script.onreadystatechange = null;
+
+          callback();
+
+        }
+
+      };
+
+    }else{
+
+      script.onload = function(){
+
+        callback();
+
+      };
+
+    }
+
+    script.src = "lib/javascript/jquery-1.7.2.min.js";
+
+    document.getElementsByTagName("head")[0].appendChild(script);
+
+  }
+  </script>  
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+ </body>
+</html>
